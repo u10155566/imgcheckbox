@@ -15,20 +15,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnOK(View view) {
+        //設定各屬性的值
         CheckBox chk;
-
         ImageView imgMina,imgMomo,imgSana,imgTzuyu;
 
+        //取得答案區各圖片的id
         imgMina=findViewById(R.id.imgMina);
         imgMomo=findViewById(R.id.imgMomo);
         imgSana=findViewById(R.id.imgSana);
         imgTzuyu=findViewById(R.id.imgTzuyu);
 
+        //完全隱藏答案區四張圖片
         imgMina.setVisibility(View.GONE);
         imgMomo.setVisibility(View.GONE);
         imgSana.setVisibility(View.GONE);
         imgTzuyu.setVisibility(View.GONE);
 
+        //當圖片被勾選後按下確認會顯示出被選中的圖片
         int[] id={R.id.chkMina, R.id.chkMomo, R.id.chkSana, R.id.chkTzuyu };
 
         for(int i:id) {
